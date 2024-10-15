@@ -13,7 +13,7 @@
 
         //new WrongVarible().displayWrongVarible();
 
-        new SwapNumbers().displaySwapNumbers();
+        //new SwapNumbers().displaySwapNumbers();
 
 
     }
@@ -118,6 +118,35 @@
             Console.WriteLine($"Nu är första heltalet {firstNumber} och andra heltalet {secondNumber}.");
         }
     }
+
+    // 2.7 Skapa ett program där användaren får mata in två heltal. 
+    //Programmet ska sedan byta värde på dessa två variabler utan att använda en tredje temporär variabel. Skriv ut värdena före och efter bytet.
+    //Du får endast använda variabler av typen int, tilldelningsoperatorn samt de aritmetiska operatorerna + eller -. 
+    //Använd ej tuples/tuple deconstruction eller nån annan fancy teknik. Syftet är att öva dig i logiskt tänkande.
+
+    class SwapNumbersTwo
+    {
+        public void displaySwapNumbers()
+        {
+            Console.WriteLine("Skriv första heltal: ");
+            int firstNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Skriv andra heltalet: ");
+            int secondNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Första heltalet är {firstNumber} och andra heltalet är {secondNumber}.");
+
+            //Obs, denna uppgift är något klurig men den går att lösa. 
+            //Kom ihåg att en variabel kan användas på båda sidor av tilldelningsoperatorn =, men att det som står till höger om = alltid sker först.
+            firstNumber = firstNumber + secondNumber;
+            secondNumber = firstNumber - secondNumber;
+            firstNumber = firstNumber - secondNumber;
+
+            Console.WriteLine($"Nu är första heltalet {firstNumber} och andra heltalet {secondNumber}.");
+        }
+    }
+
+
 
 
 
