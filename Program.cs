@@ -1,4 +1,6 @@
-﻿class SmallExercises
+﻿using System.ComponentModel;
+
+class SmallExercises
 {
     static void Main(string[] args)
     {
@@ -14,6 +16,11 @@
         //new WrongVarible().displayWrongVarible();
 
         //new SwapNumbers().displaySwapNumbers();
+
+        //new SwapNumbersTwo().displaySwapNumbers();
+
+        new AdultCheck().displayAdultCheck();
+
 
 
     }
@@ -143,6 +150,24 @@
             firstNumber = firstNumber - secondNumber;
 
             Console.WriteLine($"Nu är första heltalet {firstNumber} och andra heltalet {secondNumber}.");
+        }
+    }
+
+    class AdultCheck
+    {
+        public void displayAdultCheck()
+        {
+            Console.WriteLine("Skriv in din ålder");
+            int age = int.Parse(Console.ReadLine());
+
+            if (age >= 18)
+            {
+                Console.WriteLine("Jippi! Du är myndig och stor.");
+            }
+            else
+            {
+                Console.WriteLine("Tyvärr, Du är inte myndig.");
+            }
         }
     }
 
