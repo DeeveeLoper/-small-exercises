@@ -25,7 +25,12 @@ class SmallExercises
 
         //new WeatherCheckTwo().displayWeatherCheckTwo();
 
-        new WeatherCheckThree().displayWeatherCheckThree();
+        //new WeatherCheckThree().displayWeatherCheckThree();
+
+        //new ColdestCheckOne().displayColdestCheckOne();
+
+        new ColdestCheckTwo().displayColdestCheckTwo();
+
 
 
 
@@ -141,7 +146,6 @@ class SmallExercises
     //Programmet ska sedan byta värde på dessa två variabler utan att använda en tredje temporär variabel. Skriv ut värdena före och efter bytet.
     //Du får endast använda variabler av typen int, tilldelningsoperatorn samt de aritmetiska operatorerna + eller -. 
     //Använd ej tuples/tuple deconstruction eller nån annan fancy teknik. Syftet är att öva dig i logiskt tänkande.
-
     class SwapNumbersTwo
     {
         public void displaySwapNumbers()
@@ -183,6 +187,9 @@ class SmallExercises
         }
     }
 
+    // 3.2 Skapa ett program som ställer frågan ''Är det fint väder?''. 
+    //Om användaren svarar ''j'' skriver programmet ut ''Vi går på picknick!''. Annars händer ingenting.
+
     class WeatherCheckOne
     {
         public void displayWeatherCheckOne()
@@ -200,7 +207,6 @@ class SmallExercises
     // 3.3 Arbeta vidare på föregående övning men lägg till att användaren kan svara ''n''. 
     //Då skriver programmet ut ''Vi stannar inne och läser en bok''. 
     //Det ska inte spela någon roll om användaren matar in liten eller stor bokstav.
-
     class WeatherCheckTwo
     {
         public void displayWeatherCheckTwo()
@@ -218,6 +224,8 @@ class SmallExercises
         }
     }
 
+    // 3.4 Arbeta vidare med föregående övning. 
+    // Gör så att om användaren matar in något annat än ''j'', ''J'', ''n'' eller ''N'' så skriver programmet ut ''Jag förstår inte''.
     class WeatherCheckThree
     {
         public void displayWeatherCheckThree()
@@ -239,9 +247,62 @@ class SmallExercises
         }
     }
 
+    //Skapa ett program där användaren får mata in temperaturen för två städer (du kan själv hitta på vilka städerna är). 
+    //Programmet ska sedan berätta var det är kallast. Om det är lika kallt i båda städerna så ska programmet berätta detta istället.
+    class ColdestCheckOne
+    {
+        public void displayColdestCheckOne()
+        {
+            Console.WriteLine("Skriv hur kallt det är i Göteborg: ");
+            int tempGoteborg = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Skriv hur kallt det är i Stocholm");
+            int tempStockholm = int.Parse(Console.ReadLine());
 
+            if (tempGoteborg < tempStockholm)
+            {
+                Console.WriteLine("Det kallare i göteborg");
+            }
+            else if (tempGoteborg > tempStockholm)
+            {
+                Console.WriteLine("Det kallare i Stockholm");
+            }
+            else if (tempGoteborg == tempStockholm)
+            {
+                Console.WriteLine("Det är lika kallt i båda städerna");
+            }
+        }
+    }
 
+    //3.6 Skapa ett program där användaren får mata in temperaturen för tre städer. 
+    //Programmet ska berätta var det är kallast. Du kan utgå från följande kod men ersätta … med rätt booleanska villkor
 
+    class ColdestCheckTwo
+    {
+        public void displayColdestCheckTwo()
+        {
+            Console.Write("Ange temperatur för Östersund: ");
+            int ostersund = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Ange temperatur för Åmål: ");
+            int amal = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Ang temperatur för Arboga: ");
+            int arboga = Convert.ToInt32(Console.ReadLine());
+
+            if (ostersund < amal && ostersund < arboga)
+            {
+                Console.WriteLine("Det kallast i Östersund");
+            }
+            else if (amal < ostersund && amal < arboga)
+            {
+                Console.WriteLine("Det är kallast i Åmål.");
+            }
+            else if (arboga < ostersund && arboga < amal)
+            {
+                Console.WriteLine("Det är kallat i Arboga");
+            }
+        }
+    }
 
 }
