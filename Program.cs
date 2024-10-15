@@ -11,10 +11,9 @@
 
         //new floatingNumber().displayFloatingNumber();
 
-        new WrongVarible().displayWrongVarible();
+        //new WrongVarible().displayWrongVarible();
 
-
-
+        new SwapNumbers().displaySwapNumbers();
 
 
     }
@@ -94,6 +93,29 @@
             double b = 2;
             double c = a / b;
             Console.WriteLine(c);
+        }
+    }
+
+    // 2.6 Skapa ett program där användaren får mata in två heltal. 
+    //Programmet ska sedan byta värde på dessa två variabler genom att använda en tredje temporär variabel. 
+    //Skriv ut värdena före och efter bytet.
+    class SwapNumbers
+    {
+        public void displaySwapNumbers()
+        {
+            Console.WriteLine("Skriv första heltal: ");
+            int firstNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Skriv andra heltalet: ");
+            int secondNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Första heltalet är {firstNumber} och andra heltalet är {secondNumber}.");
+
+            int temp = firstNumber;
+            firstNumber = secondNumber;
+            secondNumber = temp;
+
+            Console.WriteLine($"Nu är första heltalet {firstNumber} och andra heltalet {secondNumber}.");
         }
     }
 
