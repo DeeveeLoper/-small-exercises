@@ -29,7 +29,9 @@ class SmallExercises
 
         //new ColdestCheckOne().displayColdestCheckOne();
 
-        new ColdestCheckTwo().displayColdestCheckTwo();
+        //new ColdestCheckTwo().displayColdestCheckTwo();
+
+        new CheckWaterTemp().displayCheckWaterTemp();
 
 
 
@@ -276,7 +278,6 @@ class SmallExercises
 
     //3.6 Skapa ett program där användaren får mata in temperaturen för tre städer. 
     //Programmet ska berätta var det är kallast. Du kan utgå från följande kod men ersätta … med rätt booleanska villkor
-
     class ColdestCheckTwo
     {
         public void displayColdestCheckTwo()
@@ -301,6 +302,35 @@ class SmallExercises
             else if (arboga < ostersund && arboga < amal)
             {
                 Console.WriteLine("Det är kallat i Arboga");
+            }
+        }
+    }
+
+    // 3.7 Skriv ett program där användaren får mata in temperaturen för vatten. 
+    //Programmet ska sedan skriva ut om vattnet är fruset, flytande eller kokande. 
+    //Om du vill kan du lägga till andra kategorier också (som ljummet, hett etc).
+    class CheckWaterTemp
+    {
+        public void displayCheckWaterTemp()
+        {
+            Console.Write("Skriv temperatur för vattnet: ");
+            int waterTemp = int.Parse(Console.ReadLine());
+
+            if (waterTemp <= 0)
+            {
+                Console.WriteLine("Vattnet är fruset!");
+            }
+            else if (waterTemp < 50)
+            {
+                Console.WriteLine("Vattnet är flytanda!");
+            }
+            else if (waterTemp < 100)
+            {
+                Console.WriteLine("Vattnet är varmt!");
+            }
+            else
+            {
+                Console.WriteLine("Vattnet är kokande!");
             }
         }
     }
