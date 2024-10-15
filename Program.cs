@@ -19,7 +19,18 @@ class SmallExercises
 
         //new SwapNumbersTwo().displaySwapNumbers();
 
-        new AdultCheck().displayAdultCheck();
+        //new AdultCheck().displayAdultCheck();
+
+        //new WeatherCheckOne().displayWeatherCheckOne();
+
+        //new WeatherCheckTwo().displayWeatherCheckTwo();
+
+        new WeatherCheckThree().displayWeatherCheckThree();
+
+
+
+
+
 
 
 
@@ -153,6 +164,7 @@ class SmallExercises
         }
     }
 
+    // 3.1 Skriv ett program där användaren får mata in sin ålder. Programmet kontrollerar sedan om användaren är myndig eller inte.
     class AdultCheck
     {
         public void displayAdultCheck()
@@ -170,6 +182,63 @@ class SmallExercises
             }
         }
     }
+
+    class WeatherCheckOne
+    {
+        public void displayWeatherCheckOne()
+        {
+            Console.WriteLine("Är det fint väder?");
+            string answer = Console.ReadLine();
+
+            if (answer == "j")
+            {
+                Console.WriteLine("Vi går på picknick!");
+            }
+        }
+    }
+
+    // 3.3 Arbeta vidare på föregående övning men lägg till att användaren kan svara ''n''. 
+    //Då skriver programmet ut ''Vi stannar inne och läser en bok''. 
+    //Det ska inte spela någon roll om användaren matar in liten eller stor bokstav.
+
+    class WeatherCheckTwo
+    {
+        public void displayWeatherCheckTwo()
+        {
+            Console.WriteLine("Är det fint väder?");
+            string answer = Console.ReadLine();
+            if (answer == "j" || answer == "J")
+            {
+                Console.WriteLine("Vi går på picknick!");
+            }
+            else if (answer == "n" || answer == "N")
+            {
+                Console.WriteLine("Vi stannar inne ock läser en bok");
+            }
+        }
+    }
+
+    class WeatherCheckThree
+    {
+        public void displayWeatherCheckThree()
+        {
+            Console.WriteLine("Är det fint väder?");
+            string answer = Console.ReadLine();
+            if (answer == "j" || answer == "J")
+            {
+                Console.WriteLine("Vi går på picknick!");
+            }
+            else if (answer == "n" || answer == "N")
+            {
+                Console.WriteLine("Vi stannar inne ock läser en bok");
+            }
+            else
+            {
+                Console.WriteLine("Jag förstår inte?");
+            }
+        }
+    }
+
 
 
 
