@@ -5,7 +5,10 @@
 
         //new SumNumer().displaySumNumber();
 
-        new AverageValue().displayAverageValue();
+        //new AverageValue().displayAverageValue();
+
+        new StoryWithTwoNames().displayStoryWithTwoNames();
+
 
 
     }
@@ -44,6 +47,21 @@
             int averageValue = sumNumbers / 3;
 
             Console.WriteLine($"Summan är {sumNumbers} och medelvärdet är {averageValue}.");
+        }
+    }
+
+    // Låt användaren mata in namnet på två personer. Programmet ska sedan skriva ut en kort berättelse om dessa två personer.
+    class StoryWithTwoNames
+    {
+        public void displayStoryWithTwoNames()
+        {
+            Console.Write("Skriv ett namn till första person: ");
+            string firstName = Console.ReadLine();
+
+            Console.Write("Srkiv ett namn till andra personen: ");
+            string secondName = Console.ReadLine();
+
+            Console.WriteLine($"Det var en gång en prins som heter {firstName} och han gifte sig med en prinsessa som heter {secondName}. Och dem levde lyckliga i alla sina dar. ");
         }
     }
 
