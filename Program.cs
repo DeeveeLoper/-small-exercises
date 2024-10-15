@@ -9,7 +9,10 @@
 
         //new StoryWithTwoNames().displayStoryWithTwoNames();
 
-        new floatingNumber().displayFloatingNumber();
+        //new floatingNumber().displayFloatingNumber();
+
+        new WrongVarible().displayWrongVarible();
+
 
 
 
@@ -78,6 +81,19 @@
             float floatingNumber = float.Parse(Console.ReadLine());
             double roundedNumber = Math.Round(floatingNumber, 2);
             Console.WriteLine($"Avrundat flyttal är: {roundedNumber}");
+        }
+    }
+
+    // 2.5 I följande kodstycke ger inte rätt utskrift
+    class WrongVarible
+    {
+        public void displayWrongVarible()
+        {
+            // variblerna ska vara float eller double. 
+            double a = 1;
+            double b = 2;
+            double c = a / b;
+            Console.WriteLine(c);
         }
     }
 
