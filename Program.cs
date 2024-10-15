@@ -6,37 +6,22 @@ class SmallExercises
     {
 
         //new SumNumer().displaySumNumber();
-
         //new AverageValue().displayAverageValue();
-
         //new StoryWithTwoNames().displayStoryWithTwoNames();
-
         //new floatingNumber().displayFloatingNumber();
-
         //new WrongVarible().displayWrongVarible();
-
         //new SwapNumbers().displaySwapNumbers();
-
         //new SwapNumbersTwo().displaySwapNumbers();
-
         //new AdultCheck().displayAdultCheck();
-
         //new WeatherCheckOne().displayWeatherCheckOne();
-
         //new WeatherCheckTwo().displayWeatherCheckTwo();
-
         //new WeatherCheckThree().displayWeatherCheckThree();
-
         //new ColdestCheckOne().displayColdestCheckOne();
-
         //new ColdestCheckTwo().displayColdestCheckTwo();
-
-        new CheckWaterTemp().displayCheckWaterTemp();
-
-
-
-
-
+        //new CheckWaterTemp().displayCheckWaterTemp();
+        //new WrongIf().DisplayWrongIf();
+        //new NumberSequenceToTwenty().DisplayNumberSequenceToTwenty();
+        new NumberSequenceToHundred().DisplayNumberSequenceToHundred();
 
 
 
@@ -315,7 +300,7 @@ class SmallExercises
         {
             Console.Write("Skriv temperatur för vattnet: ");
             int waterTemp = int.Parse(Console.ReadLine());
-
+            // OBS. Använd "if" för att inte få en evighets-loop. 
             if (waterTemp <= 0)
             {
                 Console.WriteLine("Vattnet är fruset!");
@@ -334,5 +319,63 @@ class SmallExercises
             }
         }
     }
+
+    // 3.8 Något stämmer inte riktigt med följande if-sats
+    class WrongIf
+    {
+        public void DisplayWrongIf()
+        {
+            int var = 10;
+            // Det var inget boolianskt utryck. Det var tidigare en tilldelningsoperator. 
+            if (var == 10)
+            {
+                Console.WriteLine("den är 10!");
+            }
+        }
+    }
+
+    //4.1 Skapa ett program som med hjäp av iteration skriver ut alla tal mellan 1 och 20.
+    class NumberSequenceToTwenty
+    {
+        public void DisplayNumberSequenceToTwenty()
+        {
+            // for-loopen skriv ut heltal från 1 till 20.
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine(i + 1);
+            }
+
+        }
+    }
+
+    //4.2 Skapa ett program där användaren får mata in valfritt tal upp till 100. 
+    //Programmet skriver sedan ut alla tal, från talet som användaren matade in upp till och med 100. 
+    //Om man matar in ett tal som är större än 100 så stängs programmet av direkt.
+    class NumberSequenceToHundred
+    {
+        public void DisplayNumberSequenceToHundred()
+        {
+            Console.Write("Skriv ett heltal: ");
+            int number = int.Parse(Console.ReadLine());
+
+            if (number > 100)
+            {
+                Console.WriteLine("Programmet avbryt!");
+                return;
+            }
+            else
+            {
+                for (int i = number; i <= 100; i++)
+                {
+                    Console.Write(i + " ");
+                }
+            }
+        }
+
+
+
+    }
+
+
 
 }
