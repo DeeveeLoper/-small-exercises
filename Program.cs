@@ -325,7 +325,7 @@ class SmallExercises
         public void DisplayWrongIf()
         {
             int var = 10;
-            // Det var inget boolianskt utryck. Det var tidigare en tilldelningsoperator. 
+            // Det var inget boolskt utryck. Det var tidigare en tilldelningsoperator. 
             if (var == 10)
             {
                 Console.WriteLine("den är 10!");
@@ -404,5 +404,9 @@ class SmallExercises
 
 
 
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> 1efd662b3aef2eb851f34cd1907ceb2b943a744a
