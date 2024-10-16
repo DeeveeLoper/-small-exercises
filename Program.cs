@@ -4,7 +4,7 @@ class SmallExercises
 {
     static void Main(string[] args)
     {
-        //new SumNumer().displaySumNumber();
+        //new SumNumber().displaySumNumber();
         //new AverageValue().displayAverageValue();
         //new StoryWithTwoNames().displayStoryWithTwoNames();
         //new floatingNumber().displayFloatingNumber();
@@ -23,13 +23,14 @@ class SmallExercises
         //new NumberSequenceToHundred().DisplayNumberSequenceToHundred();
         //new FlipACoin().DisplayFlipACoin();
         //new WrongLoop().DisplayWrongLoop();
-        new ThrowTheDice().DisplayTrowTheDice();
-
+        //new ThrowTheDice().DisplayTrowTheDice();
+        //new Triangle().DisplayTriangle();
+        new ReversedTriangle().DisplayReversedTriangle();
 
     }
 
     // 2.1 Skapa ett program där användaren får mata in två heltal, varefter programmet beräknar summan.
-    class SumNumer
+    class SumNumber
     {
         public void displaySumNumber()
         {
@@ -176,7 +177,6 @@ class SmallExercises
 
     // 3.2 Skapa ett program som ställer frågan ''Är det fint väder?''. 
     //Om användaren svarar ''j'' skriver programmet ut ''Vi går på picknick!''. Annars händer ingenting.
-
     class WeatherCheckOne
     {
         public void displayWeatherCheckOne()
@@ -421,13 +421,12 @@ class SmallExercises
 
     // 4.5 Skapa ett program som fem gånger slumpar fram tärningsslag (tal mellan 1 och 6). Börja med att skriva pseudokod för detta.
     // För att implementera uppgiften i C# behöver du söka reda på hur man slumpar fram saker.
-    // ================
+    // ======= pseudokod =========
     // 1. Kasta tärning
     // 2. Upprepa 5 gånger
     // 3. Tärningsnummer = visar slumpmässigt tal mellan 1 och 6
     // 4. Skriv ut kastnummer och tärningsnummer
     // 6. Avsluta program
-
     class ThrowTheDice
     {
         public void DisplayTrowTheDice()
@@ -443,7 +442,43 @@ class SmallExercises
         }
     }
 
+    //4.6 För att lösa denna uppgift beöver du använda två loopar. En loop inuti en annan. 
+    //Skriv ett program där man kan mata in en siffra x. Programmet skriver sedan ut en triangel fylld av tecknet x, med x som bas och x som höjd. 
+    //Med basen uppåt och spetsen nedåt. 
+    class Triangle
+    {
+        public void DisplayTriangle()
+        {
+            Console.Write("Ange antal: ");
+            int inputNumber = int.Parse(Console.ReadLine());
 
+            for (int i = inputNumber; i >= 1; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write($"{inputNumber} ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
 
+    // 4.7 Utveckla programmet ovan, men vänd så triangelns bas är nedåt och spetsen uppåt. 
+    class ReversedTriangle
+    {
+        public void DisplayReversedTriangle()
+        {
+            Console.Write("Ange antal: ");
+            int inputNumber = int.Parse(Console.ReadLine());
 
+            for (int i = 1; i <= inputNumber; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write($"{inputNumber} ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
 }
