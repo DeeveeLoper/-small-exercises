@@ -4,7 +4,6 @@ class SmallExercises
 {
     static void Main(string[] args)
     {
-
         //new SumNumer().displaySumNumber();
         //new AverageValue().displayAverageValue();
         //new StoryWithTwoNames().displayStoryWithTwoNames();
@@ -22,7 +21,8 @@ class SmallExercises
         //new WrongIf().DisplayWrongIf();
         //new NumberSequenceToTwenty().DisplayNumberSequenceToTwenty();
         //new NumberSequenceToHundred().DisplayNumberSequenceToHundred();
-        new FlipACoin().DisplayFlipACoin();
+        //new FlipACoin().DisplayFlipACoin();
+        new WrongLoop().DisplayWrongLoop();
 
 
     }
@@ -402,11 +402,21 @@ class SmallExercises
         }
     }
 
+    // 4.4 Följande loop simulerar en bilfärd men får vi ett felmeddelande.
+    // Detta är ett kompileringsfel: Cannot implicitly convert type 'string' to 'bool'. 
+    class WrongLoop
+    {
+        public void DisplayWrongLoop()
+        {
+            string str;
+            do
+            {
+                Console.WriteLine("Är vi framme snart?");
+                str = Console.ReadLine();
+                //Ändrad till en jämnförande operator "==".
+            } while (str == "n");
+        }
+    }
 
-
-<<<<<<< HEAD
 
 }
-=======
-}
->>>>>>> 1efd662b3aef2eb851f34cd1907ceb2b943a744a
