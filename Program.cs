@@ -22,7 +22,8 @@ class SmallExercises
         //new NumberSequenceToTwenty().DisplayNumberSequenceToTwenty();
         //new NumberSequenceToHundred().DisplayNumberSequenceToHundred();
         //new FlipACoin().DisplayFlipACoin();
-        new WrongLoop().DisplayWrongLoop();
+        //new WrongLoop().DisplayWrongLoop();
+        new ThrowTheDice().DisplayTrowTheDice();
 
 
     }
@@ -417,6 +418,32 @@ class SmallExercises
             } while (str == "n");
         }
     }
+
+    // 4.5 Skapa ett program som fem gånger slumpar fram tärningsslag (tal mellan 1 och 6). Börja med att skriva pseudokod för detta.
+    // För att implementera uppgiften i C# behöver du söka reda på hur man slumpar fram saker.
+    // ================
+    // 1. Kasta tärning
+    // 2. Upprepa 5 gånger
+    // 3. Tärningsnummer = visar slumpmässigt tal mellan 1 och 6
+    // 4. Skriv ut kastnummer och tärningsnummer
+    // 6. Avsluta program
+
+    class ThrowTheDice
+    {
+        public void DisplayTrowTheDice()
+        {
+            Console.WriteLine("Tärningen kastas 5 gånger!");
+            Random randomCount = new Random();
+
+            for (int i = 0; i < 5; i++)
+            {
+                int diceNumber = randomCount.Next(1, 7); //genererar värden mellan 1 till 6
+                Console.WriteLine($"Antal kast {i + 1}: {diceNumber}");
+            }
+        }
+    }
+
+
 
 
 }
