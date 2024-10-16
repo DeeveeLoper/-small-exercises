@@ -21,9 +21,8 @@ class SmallExercises
         //new CheckWaterTemp().displayCheckWaterTemp();
         //new WrongIf().DisplayWrongIf();
         //new NumberSequenceToTwenty().DisplayNumberSequenceToTwenty();
-        new NumberSequenceToHundred().DisplayNumberSequenceToHundred();
-
-
+        //new NumberSequenceToHundred().DisplayNumberSequenceToHundred();
+        new FlipACoin().DisplayFlipACoin();
 
 
     }
@@ -334,7 +333,7 @@ class SmallExercises
         }
     }
 
-    //4.1 Skapa ett program som med hjäp av iteration skriver ut alla tal mellan 1 och 20.
+    // 4.1 Skapa ett program som med hjäp av iteration skriver ut alla tal mellan 1 och 20.
     class NumberSequenceToTwenty
     {
         public void DisplayNumberSequenceToTwenty()
@@ -348,7 +347,7 @@ class SmallExercises
         }
     }
 
-    //4.2 Skapa ett program där användaren får mata in valfritt tal upp till 100. 
+    // 4.2 Skapa ett program där användaren får mata in valfritt tal upp till 100. 
     //Programmet skriver sedan ut alla tal, från talet som användaren matade in upp till och med 100. 
     //Om man matar in ett tal som är större än 100 så stängs programmet av direkt.
     class NumberSequenceToHundred
@@ -371,10 +370,38 @@ class SmallExercises
                 }
             }
         }
-
-
-
     }
+
+    //4.3 Be användaren mata in hur många gånger han eller hon vill singla slant. 
+    //Programmet ska sedan slumpvis mata ut om det blir krona eller klave, lika många gånger som användaren angett.
+    //För att implementera uppgiften i C# behöver du söka reda på hur man slumpar fram saker.
+    class FlipACoin
+    {
+        public void DisplayFlipACoin()
+        {
+            Console.Write("Hur många gånger vill du singla slant? ");
+            int inputFlips = int.Parse(Console.ReadLine());
+            Random randomFlips = new Random(inputFlips);
+
+            int head = 0; // Börjar på 0
+            int tail = 0; // Börjar på 0
+
+            for (int i = 0; i < inputFlips; i++)
+            {
+                if (randomFlips.Next(2) == 0)
+                {
+                    head++;
+                    Console.WriteLine("Det är krona!");
+                }
+                else
+                {
+                    tail++;
+                    Console.WriteLine("Det är klave!");
+                }
+            }
+        }
+    }
+
 
 
 
