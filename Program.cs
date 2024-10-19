@@ -4,7 +4,7 @@ class SmallExercises
 {
     static void Main(string[] args)
     {
-        //new SumNumber().displaySumNumber();
+        new SumNumber().displaySumNumber();
         //new AverageValue().displayAverageValue();
         //new StoryWithTwoNames().displayStoryWithTwoNames();
         //new floatingNumber().displayFloatingNumber();
@@ -25,7 +25,7 @@ class SmallExercises
         //new WrongLoop().DisplayWrongLoop();
         //new ThrowTheDice().DisplayTrowTheDice();
         //new Triangle().DisplayTriangle();
-        new ReversedTriangle().DisplayReversedTriangle();
+        //new ReversedTriangle().DisplayReversedTriangle();
 
     }
 
@@ -326,7 +326,7 @@ class SmallExercises
         public void DisplayWrongIf()
         {
             int var = 10;
-            // Det var inget boolskt utryck. Det var tidigare en tilldelningsoperator. 
+            // Det var inget boolskt utryck. Det var tidigare en tilldelande operator. 
             if (var == 10)
             {
                 Console.WriteLine("den är 10!");
