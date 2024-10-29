@@ -243,12 +243,12 @@ class SmallExercises
             Console.WriteLine("Skriv hur kallt det är i Göteborg: ");
             int tempGoteborg = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Skriv hur kallt det är i Stocholm");
+            Console.WriteLine("Skriv hur kallt det är i Stockholm");
             int tempStockholm = int.Parse(Console.ReadLine());
 
             if (tempGoteborg < tempStockholm)
             {
-                Console.WriteLine("Det kallare i göteborg");
+                Console.WriteLine("Det kallare i Göteborg");
             }
             else if (tempGoteborg > tempStockholm)
             {
