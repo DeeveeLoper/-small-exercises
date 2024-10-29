@@ -286,7 +286,7 @@ class SmallExercises
             }
             else if (arboga < ostersund && arboga < amal)
             {
-                Console.WriteLine("Det är kallat i Arboga");
+                Console.WriteLine("Det är kallast i Arboga");
             }
         }
     }
