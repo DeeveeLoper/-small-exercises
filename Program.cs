@@ -326,7 +326,7 @@ class SmallExercises
         public void DisplayWrongIf()
         {
             int var = 10;
-            // Det var inget boolskt utryck. Det var tidigare en tilldelande operator. 
+            // Det var inget boolskt uttryck. Det var tidigare en tilldelande operator. 
             if (var == 10)
             {
                 Console.WriteLine("den är 10!");
@@ -339,7 +339,6 @@ class SmallExercises
     {
         public void DisplayNumberSequenceToTwenty()
         {
-            // for-loopen skriv ut heltal från 1 till 20.
             for (int i = 0; i < 20; i++)
             {
                 Console.WriteLine(i + 1);
@@ -382,6 +381,7 @@ class SmallExercises
         {
             Console.Write("Hur många gånger vill du singla slant? ");
             int inputFlips = int.Parse(Console.ReadLine());
+            // Klassen Random används för att generera slumpmässiga tal.
             Random randomFlips = new Random(inputFlips);
 
             int head = 0; // Börjar på 0
@@ -432,6 +432,7 @@ class SmallExercises
         public void DisplayTrowTheDice()
         {
             Console.WriteLine("Tärningen kastas 5 gånger!");
+            // Klassen Random används för att generera slumpmässiga tal.
             Random randomCount = new Random();
 
             for (int i = 0; i < 5; i++)
